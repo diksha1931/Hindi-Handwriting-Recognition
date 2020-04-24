@@ -24,9 +24,8 @@ def keras_model(image_x,image_y):
     checkpoint1 = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True, mode='max')
     #checkpoint2 = ModelCheckpoint(filepath, monitor='val_loss', verbose=1, save_best_only=True, mode='min')
     callbacks_list = [checkpoint1]
-
+    
     return model, callbacks_list
-
 
 def main():
     data = pd.read_csv("data.csv")
